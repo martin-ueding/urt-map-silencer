@@ -10,7 +10,9 @@ do
 	unzip $map -d mappak > /dev/null
 
 	# replace some of the sound files with an empty wav file
-	for nukeit in `find mappak | egrep ".*\\.wav$$"`
+	tonuke=$(find mappak | egrep ".*\\.wav$$")
+	echo "sound file to nuke: $tonuke"
+	for nukeit in $tonuke
 	do
 		echo "nuking $nukit"
 		cp silence.wav $nukeit
@@ -25,5 +27,5 @@ do
 	cd ..
 
 	# clean up the working directory
-	rm -rf mappak
+#rm -rf mappak
 done
