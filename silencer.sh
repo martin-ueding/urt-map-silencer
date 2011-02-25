@@ -23,4 +23,4 @@ sudo mv $ZPAK $ZPAK.noisy
 sudo mv zpak.pk3 $ZPAK
 
 # clean up the working directory
-#rm -rf zpak
+rm -rf zpak
