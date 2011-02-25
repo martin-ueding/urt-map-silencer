@@ -5,5 +5,6 @@ version = 0.1
 tarballname = urt-silencer-$(version).tar.gz
 tarball: $(tarballname)
 
-$(tarballname): silencer.sh silence.wav blacklist.txt
-	tar -czf $(tarballname) silencer.sh silence.wav blacklist.txt
+projectFiles = silencer.sh silence-custom-maps.sh silence.wav blacklist.txt
+$(tarballname): $(projectFiles)
+	tar -czf $(tarballname) $(projectFiles)
