@@ -7,4 +7,4 @@ tarball: $(tarballname)
 
 projectFiles = silencer.sh silence-custom-maps.sh silence.wav blacklist.txt
 $(tarballname): $(projectFiles)
-	tar -czf $(tarballname) $(projectFiles)
+	tar -czf $@ $^
